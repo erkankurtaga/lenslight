@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import conn from "./db.js";
 import pageRoot from "./roots/pageRoot.js";
+import photoRoot from "./roots/photoRoot.js";
 
 dotenv.config();
 
@@ -18,7 +19,8 @@ app.set("view engine","ejs");
 app.use(express.static('public'));
 
 //roots
-app.use('',pageRoot);
+app.use('/',pageRoot);
+app.use('/photos',photoRoot);
 
 app.listen(port,()=>{
     console.log("Application running on port : %d",port);
