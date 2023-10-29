@@ -7,5 +7,7 @@ router
   .route('/')
   .get(photoController.getAllPhotos)
   .post(photoController.createPhoto);
+
+router.route("/:id").get(photoController.getAPhoto);
   
 export default router
