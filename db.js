@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
-const conn = () =>{
+const connectDB = () =>{
     mongoose.connect(process.env.DB_URI,{
         dbName:"lenslight",
-        useNewUrlParser:true,
-        useUnifiedTopology:true
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     }).then(() => {
        console.log("Connected to the DB successfully") 
     }).catch((err) => {
@@ -12,4 +12,4 @@ const conn = () =>{
     });
 };
 
-export default conn
+export default connectDB;

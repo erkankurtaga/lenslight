@@ -1,38 +1,32 @@
-const getIndexPage = (req,res) =>{
-    res.render("index");    
-}; 
+const getIndexPage = (req, res) => {
+  res.render('index', { link: 'index' })
+}
 
-const getAboutPage = (req,res) =>{
-    res.render("about");    
-}; 
+const getAboutPage = (req, res) => {
+  res.render('about', { link: 'about' })
+}
 
-const getServicesPage = (req,res) =>{
-    res.render("services");    
-}; 
+const getServicesPage = (req, res) => {
+  res.render('services', { link: 'services' })
+}
 
-const getGalleryPage = (req,res)=>{
-    res.render("gallery");
-};
+const getProjectsPage = (req, res) => {
+  res.render('projects', { link: 'projects' })
+}
 
-const getProjectsPage = (req,res)=>{
-    res.render("projects");
-};
+const getBlogPage = (req, res) => {
+  res.render('blog', { link: 'blog' })
+}
 
-const getBlogPage = (req,res)=>{
-    res.render("blog");
-};
-
-const getContactPage = (req,res)=>{
-    res.render("contact");
-};
-
+const getContactPage = (req, res) => {
+  res.render('contact', { link: 'contact' })
+}
 
 export {
-    getIndexPage,
-    getAboutPage,
-    getServicesPage,
-    getGalleryPage,
-    getProjectsPage,
-    getBlogPage,
-    getContactPage
+  getIndexPage,
+  getAboutPage,
+  getServicesPage,
+  getProjectsPage,
+  getBlogPage,
+  getContactPage
 }

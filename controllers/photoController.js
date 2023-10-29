@@ -17,21 +17,19 @@ const createPhoto = async (req, res) => {
   }
 }
 
-const getAllPhotos = async (req,res) => {
-    try {
-        const photos = await Photo.find({});
-        res.status(201).json({
-            succeded: true,
-            photos
-          })
-    } catch (error) {
-        res.status(500).json({
-            succeded: false,
-            error
-          })              
-    }
+const getAllPhotos = async (req, res) => {
+  try {
+    const photos = await Photo.find({})
+    res.status(200).render('photos', {
+      photos,
+      link:"photos"
+    });
+    //.json({succeded: true,photos})
+  } catch (error) {
+    res.status(500).json({
+      succeded: false,
+      error
+    })
+  }
 }
-export { 
-    createPhoto,
-    getAllPhotos
- }
+export { createPhoto, getAllPhotos }
