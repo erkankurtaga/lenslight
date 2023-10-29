@@ -1,8 +1,11 @@
-import express from "express";
-import * as photoController from "../controllers/photoController.js";
+import express from 'express'
+import * as photoController from '../controllers/photoController.js'
 
-const rooter = express.Router();
+const router = express.Router()
 
-rooter.route("/").post(photoController.createPhoto);
+router
+  .route('/')
+  .post(photoController.createPhoto)
+  .get(photoController.getAllPhotos);
 
-export default rooter;
+export default router

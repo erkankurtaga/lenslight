@@ -1,14 +1,14 @@
 import express from "express";
 import * as pageController from "../controllers/pageController.js";
 
-const rooter = express.Router();
+const router = express.Router();
 
-rooter.route("/").get(pageController.getIndexPage);
-rooter.route("/about").get(pageController.getAboutPage);
-rooter.route("/services").get(pageController.getServicesPage);
-rooter.route("/gallery").get(pageController.getGalleryPage);
-rooter.route("/projects").get(pageController.getProjectsPage);
-rooter.route("/blog").get(pageController.getBlogPage);
-rooter.route("/contact").get(pageController.getContactPage);
+router.route("/").get(pageController.getIndexPage);
+router.route("/about").get(pageController.getAboutPage);
+router.route("/services").get(pageController.getServicesPage);
+router.route("/gallery").get(pageController.getGalleryPage);
+router.route("/projects").get(pageController.getProjectsPage);
+router.route("/blog").get(pageController.getBlogPage);
+router.route("/contact").get(pageController.getContactPage);
 
-export default rooter;
+export default router;
