@@ -22,11 +22,17 @@ const getContactPage = (req, res) => {
   res.render('contact', { link: 'contact' })
 }
 
+const getRegisterPage = (req, res) => {
+  res.render('register', { link: 'register' })
+}
+
+
 export {
   getIndexPage,
   getAboutPage,
   getServicesPage,
   getProjectsPage,
   getBlogPage,
-  getContactPage
+  getContactPage,
+  getRegisterPage
 }
