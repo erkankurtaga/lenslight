@@ -26,6 +26,9 @@ const getRegisterPage = (req, res) => {
   res.render('register', { link: 'register' })
 }
 
+const getLoginPage = (req, res) => {
+  res.render('login', { link: 'login' })
+}
 
 export {
   getIndexPage,
@@ -34,5 +37,6 @@ export {
   getProjectsPage,
   getBlogPage,
   getContactPage,
-  getRegisterPage
+  getRegisterPage,
+  getLoginPage
 }
